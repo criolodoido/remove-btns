@@ -1,0 +1,37 @@
+<RootScreen>:
+	PrimeiroScreen:
+	SegundoScreen:
+	
+<PrimeiroScreen>:
+	GridLayout:
+		cols: 1
+		size_hint: (.5,1)
+		id: grade
+		Button:
+			text: "oi"
+			on_press: root.add(self)
+		Button:
+			text: "Muda"
+			on_press: root.manager.current = 'dois'
+	StackLayout:
+		orientation: 'bt-rl'
+		GridLayout:
+			cols: 1
+			size_hint: (.5,1)
+			id: grade2
+
+<SegundoScreen>:
+	StackLayout:
+		orientation: 'bt-lr'
+		ScrollView:
+			size_hint: (.3, .8)
+			#pos_hint:{'x': .0, 'y': .0}
+			GridLayout:
+				cols: 1
+				padding: 0, 100
+				spacing: 10, 50
+				size_hint: (1, 1)
+				size_hint_y:  None
+				height: self.minimum_height
+				width: 500
+				id: grade3
